@@ -1,0 +1,101 @@
+.projects { background: var(--gray-950); }
+
+.projects-list { display: flex; flex-direction: column; }
+
+.project-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 28px;
+  padding: 32px 0;
+  border-top: 1px solid var(--gray-800);
+  transition: background 0.18s;
+}
+.project-row:last-child { border-bottom: 1px solid var(--gray-800); }
+.project-row:hover { background: rgba(255,255,255,0.01); }
+.project-row.upcoming { opacity: 0.75; }
+
+.project-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--subtle);
+  padding-top: 4px;
+  letter-spacing: 1px;
+}
+
+.project-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.3px;
+  margin-bottom: 3px;
+}
+.project-subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--blue-400);
+  letter-spacing: 0.3px;
+}
+
+.project-links { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+.proj-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-700);
+  color: var(--muted);
+  transition: all 0.18s;
+}
+.proj-icon-btn:hover {
+  border-color: var(--blue-500);
+  color: var(--blue-300);
+  background: rgba(37,99,235,0.08);
+}
+
+.upcoming-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(34,197,94,0.08);
+  color: #4ade80;
+  border: 1px solid rgba(34,197,94,0.2);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ptag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--gray-200);
+  background: var(--gray-900);
+  border: 1px solid var(--gray-700);
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 600px) {
+  .project-row { grid-template-columns: 1fr; gap: 8px; }
+  .project-num { padding-top: 0; }
+  .project-top-row { flex-direction: column; }
+}

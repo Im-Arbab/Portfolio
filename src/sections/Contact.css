@@ -1,0 +1,112 @@
+.contact { background: var(--gray-950); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-links { display: flex; flex-direction: column; gap: 2px; margin-bottom: 24px; }
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--gray-900);
+  border: 1px solid var(--gray-800);
+  border-radius: var(--radius);
+  transition: border-color 0.18s;
+  cursor: default;
+}
+a.contact-link { cursor: pointer; }
+a.contact-link:hover { border-color: var(--gray-600); }
+
+.cl-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(37,99,235,0.1);
+  border: 1px solid rgba(37,99,235,0.2);
+  color: var(--blue-400);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cl-label { font-family: var(--font-mono); font-size: 9px; color: var(--subtle); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2px; }
+.cl-value { font-size: 13px; font-weight: 500; color: var(--white); }
+
+.contact-socials {
+  display: flex; gap: 10px; margin-bottom: 24px;
+}
+.social-btn {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px;
+  background: var(--gray-900);
+  border: 1px solid var(--gray-700);
+  border-radius: var(--radius);
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  transition: all 0.18s;
+}
+.social-btn:hover { border-color: var(--blue-500); color: var(--blue-300); }
+
+.avail-card {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(34,197,94,0.05);
+  border: 1px solid rgba(34,197,94,0.15);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+/* Form */
+.contact-form {
+  background: var(--gray-900);
+  border: 1px solid var(--gray-800);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.form-field {
+  display: flex; flex-direction: column; gap: 7px;
+  margin-bottom: 18px;
+}
+.field-label {
+  font-family: var(--font-mono);
+  font-size: 10px; font-weight: 500;
+  color: var(--gray-200); letter-spacing: 1.5px; text-transform: uppercase;
+}
+.form-field input,
+.form-field textarea {
+  background: var(--gray-850);
+  border: 1px solid var(--gray-500);
+  border-radius: var(--radius);
+  padding: 11px 14px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.18s;
+  resize: vertical;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: var(--gray-400); }
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.send-btn { width: 100%; justify-content: center; margin-top: 4px; padding: 13px !important; }
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+}
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 480px) {
+  .contact-form { padding: 20px; }
+}
