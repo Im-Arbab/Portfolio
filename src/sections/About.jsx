@@ -5,8 +5,16 @@ const timeline = [
   {
     type: 'work',
     title: 'Web Developer',
+    org: 'Impact Tech Solutions',
+    period: 'July 2025 - Present',
+    desc: 'Responsible of Developing and maintaing web applications and website with React.js, Tailwind CSS and MongoDB, handling API integration and Database.',
+    icon: '💼',
+    active: true,
+  {
+    type: 'work',
+    title: 'Frontend Developer',
     org: 'Sterling Digital Solutions',
-    period: 'Aug 2025 – Present',
+    period: 'Aug 2024 – May 2025',
     desc: 'Building and maintaining websites with React.js, handling frontend tasks, API integrations, and converting Figma designs into responsive pages.',
     icon: '💼',
     active: true,
